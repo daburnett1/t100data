@@ -18,3 +18,7 @@ class MarketData(models.Model):
     dest_city_name = models.TextField()
     dest_state_abr = models.TextField(max_length=2)
     month = models.IntegerField(default=0)
+
+counter = 0
+airlines = 'None'
+airline = 'None'

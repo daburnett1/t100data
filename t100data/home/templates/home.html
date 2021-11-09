@@ -76,13 +76,13 @@
                 * UA (United Airlines)
                 * WN (Southwest Airlines)
             {% endcomment %}
-            <li><a href=" {% url 'topairlinepassmonth' %} "> Rank order passengers carried, by month, for these airlines:</a>
+            <li>Rank order passengers carried, by month, for these airlines:
                 <ul>
-                    <li>AA (American Airlines)</li>
-                    <li>AS (Alaska Airlines)</li>
-                    <li>DL (Delta Airlines)</li>
-                    <li>UA (United Airlines)</li>
-                    <li>WN (Southwest Airlines)</li>
+                    <li><a href=" {% url 'AApassmonth' %} ">AA (American Airlines)</a></li>
+                    <li><a href=" {% url 'ASpassmonth' %} ">AS (Alaska Airlines)</a></li>
+                    <li><a href=" {% url 'DLpassmonth' %} ">DL (Delta Airlines)</a></li>
+                    <li><a href=" {% url 'UApassmonth' %} ">UA (United Airlines)</a></li>
+                    <li><a href=" {% url 'WNpassmonth' %} ">WN (Southwest Airlines)</a></li>
                 </ul>
             </li>
             {% comment %} 
@@ -95,11 +95,11 @@
             {% endcomment %}
             <li>Find the average number of passengers for flights into:
                 <ul>
-                    <li>LAX (Los Angeles)</li>
-                    <li>SFO (San Francisco)</li>
-                    <li>DFW (Dallas-Fort Worth)</li>
-                    <li>ATL (Atlanta)</li>
-                    <li>ORD (Chicago)</li>
+                    <li><a href=" {% url 'AVGpasstoLAX' %} ">LAX (Los Angeles)</a></li>
+                    <li><a href=" {% url 'AVGpasstoSFO' %} ">SFO (San Francisco)</a></li>
+                    <li><a href=" {% url 'AVGpasstoDFW' %} ">DFW (Dallas-Fort Worth)</a></li>
+                    <li><a href=" {% url 'AVGpasstoATL' %} ">ATL (Atlanta)</a></li>
+                    <li><a href=" {% url 'AVGpasstoORD' %} ">ORD (Chicago)</a></li>
                 </ul>
             </li>
 
@@ -113,11 +113,11 @@
             {% endcomment %}
             <li> Find the average volume of freight for flights departing:
                 <ul>
-                    <li>MIA (Miami)</li>
-                    <li>MEM (Memphis)</li>
-                    <li>JFK (New York JFK)</li>
-                    <li>ANC (Anchorage)</li>
-                    <li>SDF (Louisville)</li>
+                    <li><a href=" {% url 'AVGfrtfromMIA' %} ">MIA (Miami)</a></li>
+                    <li><a href=" {% url 'AVGfrtfromMEM' %} ">MEM (Memphis)</a></li>
+                    <li><a href=" {% url 'AVGfrtfromJFK' %} ">JFK (New York JFK)</a></li>
+                    <li><a href=" {% url 'AVGfrtfromANC' %} ">ANC (Anchorage)</a></li>
+                    <li><a href=" {% url 'AVGfrtfromSDF' %} ">SDF (Louisville)</a></li>
                 </ul>
             </li>
             {% comment %} 

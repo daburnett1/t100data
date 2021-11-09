@@ -15,7 +15,21 @@ from . views import MarketDataList, \
                     TopPassengersbyAirline, \
                     TopMailbyAirline, \
                     TopDistbyAirline, \
-                    TopAirlinePassByMonth         
+                    AAPassByMonth, \
+                    ASPassByMonth, \
+                    DLPassByMonth, \
+                    UAPassByMonth, \
+                    WNPassByMonth, \
+                    AVGPassengersToLAX, \
+                    AVGPassengersToSFO, \
+                    AVGPassengersToDFW, \
+                    AVGPassengersToATL, \
+                    AVGPassengersToORD, \
+                    AVGFreightFromMIA, \
+                    AVGFreightFromMEM, \
+                    AVGFreightFromJFK, \
+                    AVGFreightFromANC, \
+                    AVGFreightFromSDF        
 
 
 urlpatterns = [
@@ -90,9 +104,79 @@ urlpatterns = [
             extra_context={'title': "Top Airline by Longest Flight Distance"}
         ), 
         name="topairlinedist"),
-    path('topairlinepassmonth/<str:airline>',  
-        TopAirlinePassByMonth.as_view(
-            extra_context={'title': "Ranking of Top 5 Airlines by Passengers Carried"}
+    path('AApassmonth/AA',  
+        AAPassByMonth.as_view(
+            extra_context={'title': "Ranking of American Airlines by Passengers Carried by Month"}
         ), 
-        name="topairlinepassmonth"),                                        
+        name="AApassmonth"),
+    path('ASpassmonth/AS',  
+        ASPassByMonth.as_view(
+            extra_context={'title': "Ranking of Alaska Airlines by Passengers Carried by Month"}
+        ), 
+        name="ASpassmonth"),
+    path('DLpassmonth/DL',  
+        DLPassByMonth.as_view(
+            extra_context={'title': "Ranking of Delta Airlines by Passengers Carried by Month"}
+        ), 
+        name="DLpassmonth"),
+    path('UApassmonth/UA',  
+        UAPassByMonth.as_view(
+            extra_context={'title': "Ranking of United Airlines by Passengers Carried by Month"}
+        ), 
+        name="UApassmonth"),
+    path('WNpassmonth/WN',  
+        WNPassByMonth.as_view(
+            extra_context={'title': "Ranking of Southwest Airlines by Passengers Carried by Month"}
+        ), 
+        name="WNpassmonth"),
+    path('AVGpasstoLAX/LAX',  
+        AVGPassengersToLAX.as_view(
+            extra_context={'title': "Average of Passengers Flown Into Los Angeles International Airport"}
+        ), 
+        name="AVGpasstoLAX"),
+    path('AVGpasstoSFO/SFO',  
+        AVGPassengersToSFO.as_view(
+            extra_context={'title': "Average of Passengers Flown Into San Franciso International Airport"}
+        ), 
+        name="AVGpasstoSFO"),
+    path('AVGpasstoDFW/DFW',  
+        AVGPassengersToDFW.as_view(
+            extra_context={'title': "Average of Passengers Flown Into Dallas/Fort Worth International Airport"}
+        ), 
+        name="AVGpasstoDFW"),
+    path('AVGpasstoATL/ATL',  
+        AVGPassengersToATL.as_view(
+            extra_context={'title': "Average of Passengers Flown Into Atlanta International Airport"}
+        ), 
+        name="AVGpasstoATL"),
+    path('AVGpasstoORD/ORD',  
+        AVGPassengersToORD.as_view(
+            extra_context={'title': "Average of Passengers Flown Into Chicago International Airport"}
+        ), 
+        name="AVGpasstoORD"),
+    path('AVGfrtfromMIA/MIA',  
+        AVGFreightFromMIA.as_view(
+            extra_context={'title': "Average of Freight Flown Out of Miami International Airport"}
+        ), 
+        name="AVGfrtfromMIA"),
+    path('AVGfrtfromMEM/MEM',  
+        AVGFreightFromMEM.as_view(
+            extra_context={'title': "Average of Freight Flown Out of Memphis International Airport"}
+        ), 
+        name="AVGfrtfromMEM"),
+    path('AVGfrtfromJFK/JFK',  
+        AVGFreightFromJFK.as_view(
+            extra_context={'title': "Average of Freight Flown Out of John F. Kennedy International Airport"}
+        ), 
+        name="AVGfrtfromJFK"),
+    path('AVGfrtfromANC/ANC',  
+        AVGFreightFromANC.as_view(
+            extra_context={'title': "Average of Freight Flown Out of Anchorage International Airport"}
+        ), 
+        name="AVGfrtfromANC"),
+    path('AVGfrtfromSDF/SDF',  
+        AVGFreightFromSDF.as_view(
+            extra_context={'title': "Average of Freight Flown Out of Louisville International Airport"}
+        ), 
+        name="AVGfrtfromSDF"),                                                                                            
 ]
